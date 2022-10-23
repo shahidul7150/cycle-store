@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./Products.module.css";
 
 // Redux
 import { connect } from "react-redux";
@@ -8,7 +7,7 @@ import Product from "./Product/Product";
 
 const Products = ({ products }) => {
   return (
-    <div className={styles.products}>
+    <div>
       {products.map((product) => (
         <Product key={product.id} product={product} />
       ))}

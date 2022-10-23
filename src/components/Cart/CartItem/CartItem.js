@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./CartItem.module.css";
+
 
 import { connect } from "react-redux";
 import {
@@ -16,19 +16,19 @@ const CartItem = ({ item, adjustQty, removeFromCart }) => {
   };
 
   return (
-    <div className={styles.cartItem}>
+    <div >
       <img
-        className={styles.cartItem__image}
+
         src={item.image}
         alt={item.title}
       />
-      <div className={styles.cartItem__details}>
-        <p className={styles.details__title}>{item.title}</p>
-        <p className={styles.details__desc}>{item.description}</p>
-        <p className={styles.details__price}>$ {item.price}</p>
+      <div >
+        <p >{item.title}</p>
+        <p >{item.description}</p>
+        <p >$ {item.price}</p>
       </div>
-      <div className={styles.cartItem__actions}>
-        <div className={styles.cartItem__qty}>
+      <div >
+        <div >
           <label htmlFor="qty">Qty</label>
           <input
             min="1"
@@ -41,7 +41,7 @@ const CartItem = ({ item, adjustQty, removeFromCart }) => {
         </div>
         <button
           onClick={() => removeFromCart(item.id)}
-          className={styles.actions__deleteItemBtn}
+
         >
           <img
             src="https://image.flaticon.com/icons/svg/709/709519.svg"

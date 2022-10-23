@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import styles from "./Product.module.css";
+
 
 // Redux
 import { connect } from "react-redux";
@@ -22,7 +22,8 @@ const Product = ({ product, addToCart, loadCurrentItem }) => {
         <p className="bg-red-600" >{product.title}</p>
         <p >{product.description}</p>
         <p >$ {product.price}</p>
-        <p className="text-7xl">Testing</p>
+        <h1 className="text-7xl bg-red-500">Testing</h1>
+        <button className="btn">Button</button>
       </div>
 
       <div >

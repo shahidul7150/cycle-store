@@ -5,13 +5,14 @@ import { Route, Routes } from 'react-router-dom';
 import Products from './components/Products/Products';
 import Cart from './components/Cart/Cart';
 import SingleItem from './components/SingleItem/SingleItem';
+import Home from './components/Home/Home';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
+    <div data-theme="light">
+
       <Routes>
-        <Route path="/" element={<Products />} />
+        <Route path="/" element={<Home />} />
         <Route exact path="/cart" element={<Cart />} />
         <Route exact path="/product/:id" element={<SingleItem />} />
         {/* {!current ? (
