@@ -32,11 +32,13 @@ const Banner = () => {
 
             <div className="card card-side md:felx md:flex-row-reverse  flex-col bg-[#062c5e] shadow-xl rounded-none">
 
-                <div className="card-body">
+                <div className="card-body pb-0">
                     <Navbar />
 
                     <div className="block md:flex  justify-between flex-row-reverse items-center">
-                        <figure><img src={coverImg} alt="Movie" /></figure>
+                        <div className="bg-[#0c367273] rounded-t-full">
+                            <figure><img src={coverImg} alt="cover" /></figure>
+                        </div>
                         {/* <img className="" src="https://m.media-amazon.com/images/I/81QGBYeo1gL._SX425_.jpg" alt="" /> */}
                         <div className="md:px-12 mt-6">
                             <h1 className="md:text-6xl text-4xl font-bold">Ride With Enjoy</h1>
