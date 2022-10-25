@@ -11,7 +11,7 @@ import {
 
 const Product = ({ product, addToCart, loadCurrentItem }) => {
   return (
-    <div >
+    <div className="shadow-xl" >
       <img
 
         src={product.image}
@@ -19,11 +19,10 @@ const Product = ({ product, addToCart, loadCurrentItem }) => {
       />
 
       <div >
-        <p className="bg-red-600" >{product.title}</p>
+        <p className="" >{product.title}</p>
         <p >{product.description}</p>
         <p >$ {product.price}</p>
-        <h1 className="text-7xl bg-red-500">Testing</h1>
-        <button className="btn">Button</button>
+
       </div>
 
       <div >

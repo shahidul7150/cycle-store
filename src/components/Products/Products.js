@@ -7,10 +7,13 @@ import Product from "./Product/Product";
 
 const Products = ({ products }) => {
   return (
-    <div>
-      {products.map((product) => (
-        <Product key={product.id} product={product} />
-      ))}
+    <div className="mt-24 ">
+      <h1 className="text-center text-2xl font-semibold my-3">Feature Products</h1>
+      <div className="grid md:grid-cols-4 gap-5 mx-12">
+        {products.map((product) => (
+          <Product key={product.id} product={product} />
+        ))}
+      </div>
     </div>
   );
 };

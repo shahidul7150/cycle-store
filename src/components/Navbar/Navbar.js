@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FcShop } from "react-icons/fc";
-import { IoMdMenu } from "react-icons/io";
+// import { FcShop } from "react-icons/fc";
+import { IoMdMenu, IoCart, IoMdCart } from "react-icons/io";
 
 import { connect } from "react-redux";
 
@@ -47,7 +47,7 @@ const Navbar = ({ cart }) => {
                 <Link to="/cart">
                   <div className="flex jusi" >
                     <h3>Cart</h3>
-                    <FcShop />
+                    <IoMdCart />
                     <div >{cartCount}</div>
                   </div>
                 </Link>
@@ -81,12 +81,11 @@ const Navbar = ({ cart }) => {
             <li >
               <Link to='/' className="py-0">Contact</Link>
             </li>
-            <li className="lg:ml-32">
+            <li className="lg:ml-32 relative hover:text-red-300">
               <Link className="py-0" to="/cart">
-                <div className="flex jusi" >
-                  <h3>Cart</h3>
-                  <FcShop />
-                  <div >{cartCount}</div>
+                <div className="flex absolute " >
+                  <IoMdCart className="" />
+                  <div className="text-xs font-bold absolute -top-3 left-3  bg-white w-4 h-4 rounded-full flex justify-center items-center text-[#062c5e] " >{cartCount}</div>
                 </div>
               </Link>
             </li>
