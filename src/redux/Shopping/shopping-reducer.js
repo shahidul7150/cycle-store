@@ -1,5 +1,8 @@
 import * as actionTypes from "./shopping-types";
-
+import cycle1 from '../../assets/cycle1.jpg'
+import cycle2 from '../../assets/cycle2.jpg'
+import ladyCycle from '../../assets/ladyCycle.jpg'
+import blackCycle from '../../assets/blackCycle.jpg'
 const INITIAL_STATE = {
   products: [
     {
@@ -9,7 +12,9 @@ const INITIAL_STATE = {
         "This cube will keep you busy the entire day and it is very fun to play with",
       price: 15.0,
       image:
-        "https://images.unsplash.com/photo-1591991731833-b4807cf7ef94?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+        `${cycle1}`,
+      // image:
+      //   "https://images.unsplash.com/photo-1591991731833-b4807cf7ef94?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     },
     {
       id: 2,
@@ -18,7 +23,7 @@ const INITIAL_STATE = {
         "Get a big cup of coffee every morning before the day starts",
       price: 20.0,
       image:
-        "https://images.unsplash.com/photo-1572119865084-43c285814d63?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        `${cycle2}`
     },
     {
       id: 3,
@@ -27,7 +32,16 @@ const INITIAL_STATE = {
         "These books will keep you busy all throughout the entire lockdown and give you some great advise from famous people",
       price: 150.0,
       image:
-        "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1374&q=80",
+        `${ladyCycle}`
+    },
+    {
+      id: 4,
+      title: "Books That CHANGED My Life",
+      description:
+        "These books will keep you busy all throughout the entire lockdown and give you some great advise from famous people",
+      price: 150.0,
+      image:
+        `${blackCycle}`
     },
   ],
   cart: [],
@@ -50,10 +64,10 @@ const shopReducer = (state = INITIAL_STATE, action) => {
         ...state,
         cart: inCart
           ? state.cart.map((item) =>
-              item.id === action.payload.id
-                ? { ...item, qty: item.qty + 1 }
-                : item
-            )
+            item.id === action.payload.id
+              ? { ...item, qty: item.qty + 1 }
+              : item
+          )
           : [...state.cart, { ...item, qty: 1 }],
       };
     case actionTypes.REMOVE_FROM_CART:
