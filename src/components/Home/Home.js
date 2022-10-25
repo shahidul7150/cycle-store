@@ -6,7 +6,7 @@ import Timmer from './Timmer'
 
 const Home = () => {
     return (
-        <div className="bg-[#fff]">
+        <div className="h-full">
             <Banner />
             <Products />
             <MiddlePart />
