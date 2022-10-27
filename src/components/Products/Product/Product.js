@@ -13,9 +13,9 @@ import {
 
 const Product = ({ product, addToCart, loadCurrentItem }) => {
   return (
-    <div className="shadow-xl" >
-      <img
-
+    <div className="shadow-xl bg-[#FFFFFF] rounded" >
+      <img width="80%"
+        className="mx-auto p-5 hover:transform hover:scale-110 hover:transition-all .3s"
         src={product.image}
         alt={product.title}
       />
@@ -41,14 +41,14 @@ const Product = ({ product, addToCart, loadCurrentItem }) => {
         <Link to={`/product/${product.id}`}>
           <button
             onClick={() => loadCurrentItem(product)}
-            className="bg-[#062c5e] py-1 px-2 text-white"
+            className="bg-[#062c5e] py-1 px-2 text-white rounded-md"
           >
             View Item
           </button>
         </Link>
         <button
           onClick={() => addToCart(product.id)}
-
+          className="hover:scale-125 transition-all .3s hover:bg-slate-200 rounded-full w-8 flex justify-center items-center"
         >
           <MdAddShoppingCart />
         </button>

@@ -7,10 +7,10 @@ import Product from "./Product/Product";
 
 const Products = ({ products }) => {
   return (
-    <div className="mt-24 ">
-      <h1 className="text-center text-2xl font-semibold my-8">Feature Products</h1>
+    <div >
+
       <div className="grid md:grid-cols-4 gap-5 mx-12">
-        {products.map((product) => (
+        {products.slice(0, 4).map((product) => (
           <Product key={product.id} product={product} />
         ))}
       </div>
