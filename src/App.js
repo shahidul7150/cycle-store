@@ -6,6 +6,7 @@ import Products from './components/Products/Products';
 import Cart from './components/Cart/Cart';
 import SingleItem from './components/SingleItem/SingleItem';
 import Home from './components/Home/Home';
+import Store from './components/Home/Store/Store';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route exact path="/cart" element={<Cart />} />
+        <Route exact path="/store" element={<Store />} />
         <Route exact path="/product/:id" element={<SingleItem />} />
         {/* {!current ? (
           <Redirect to="/" />

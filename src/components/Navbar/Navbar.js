@@ -43,26 +43,23 @@ const Navbar = ({ cart }) => {
               <IoMdMenu className="text-2xl" />
             </label>
             <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-[#579df84f] rounded-box w-52">
-              <li>
-                <Link to="/cart">
-                  <div className="flex jusi" >
-                    <h3>Cart</h3>
-                    <IoMdCart />
-                    <div >{cartCount}</div>
-                  </div>
-                </Link>
+              <li className="grid grid-cols-2">
+                <Link to='/' className="py-0 ">Home</Link>
+                <Link to='/cart' className="py-0 bg-yellow-500 text-[#062c5e] text-center"><IoMdCart className="" />{cartCount}</Link>
               </li>
-              <li tabIndex={0}>
-                <a className="justify-between">
-                  Parent
-                  <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-                </a>
-                <ul className="p-2">
-                  <li><a>Submenu</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
+              <li >
+                <Link to='/store' className="py-0">Store</Link>
               </li>
-              <li><a>Item 3</a></li>
+              <li >
+                <Link to='/' className="py-0">About</Link>
+              </li>
+              <li >
+                <Link to='/' className="py-0">Contact</Link>
+              </li>
+              <li >
+                <Link to='/cart' className="py-0"> <IoMdCart className="" />{cartCount}</Link>
+              </li>
+
             </ul>
           </div>
 
@@ -73,7 +70,7 @@ const Navbar = ({ cart }) => {
               <Link to='/' className="py-0 pl-0">Home</Link>
             </li>
             <li >
-              <Link to='/' className="py-0">Store</Link>
+              <Link to='/store' className="py-0">Store</Link>
             </li>
             <li >
               <Link to='/' className="py-0">About</Link>
