@@ -5,7 +5,7 @@ import lview from '../../assets/lview.jpg'
 
 const MiddlePart = () => {
     return (
-        <div className="grid grid-cols-2 gap-8 mx-12 mt-12 ">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-8 mx-12 mt-12 ">
             <div>
                 <div className="h-full" style={{ backgroundImage: 'url(' + classicImg + ')', backgroundSize: 'cover' }}>
                     <div className="bg-[#063b698e] h-full flex justify-start items-end">

@@ -7,6 +7,8 @@ import Cart from './components/Cart/Cart';
 import SingleItem from './components/SingleItem/SingleItem';
 import Home from './components/Home/Home';
 import Store from './components/Home/Store/Store';
+import Footer from './components/Footer/Footer';
+import About from './components/About.js/About';
 
 function App() {
   return (
@@ -14,15 +16,18 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route exact path="/cart" element={<Cart />} />
         <Route exact path="/store" element={<Store />} />
         <Route exact path="/product/:id" element={<SingleItem />} />
+        <Route exact path="/about" element={<About />} />
         {/* {!current ? (
           <Redirect to="/" />
         ) : (
           <Route exact path="/product/:id" component={SingleItem} />
         )} */}
       </Routes>
+      <Footer />
     </div>
   );
 }

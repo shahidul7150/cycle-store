@@ -51,7 +51,7 @@ const Navbar = ({ cart }) => {
                 <Link to='/store' className="py-0">Store</Link>
               </li>
               <li >
-                <Link to='/' className="py-0">About</Link>
+                <Link to='/about' className="py-0">About</Link>
               </li>
               <li >
                 <Link to='/' className="py-0">Contact</Link>
@@ -73,7 +73,7 @@ const Navbar = ({ cart }) => {
               <Link to='/store' className="py-0">Store</Link>
             </li>
             <li >
-              <Link to='/' className="py-0">About</Link>
+              <Link to='/about' className="py-0">About</Link>
             </li>
             <li >
               <Link to='/' className="py-0">Contact</Link>
