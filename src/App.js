@@ -9,6 +9,7 @@ import Home from './components/Home/Home';
 import Store from './components/Home/Store/Store';
 import Footer from './components/Footer/Footer';
 import About from './components/About.js/About';
+import Contact from './components/contact/Contact';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/store" element={<Store />} />
         <Route exact path="/product/:id" element={<SingleItem />} />
         <Route exact path="/about" element={<About />} />
+        <Route exact path="/contact" element={<Contact />} />
         {/* {!current ? (
           <Redirect to="/" />
         ) : (

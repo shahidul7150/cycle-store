@@ -4,15 +4,21 @@ import w1 from '../../assets/w-1.jpg'
 import w2 from '../../assets/w-2.jpg'
 import w3 from '../../assets/w-3.jpg'
 import map from '../../assets/map.jpg'
+import about from '../../assets/about.jpg'
 const About = () => {
     return (
         <div >
             <div className="bg-[#062c5e] text-white py-8 px-8" >
                 <Navbar />
             </div>
+            <div>
+                <img src={about} alt="" />
+            </div>
             <div className="px-12">
+
+
                 <h1 className="text-center text-2xl font-bold mt-8 uppercase pb-8">Who we are</h1>
-                <div className="grid grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
                     {/* card1  */}
                     <div className="grid grid-row bg-[#16165e] text-white rounded-md">
@@ -44,10 +50,10 @@ const About = () => {
 
             <div className="px-12">
                 <h1 className="text-2xl font-bold py-8 uppercase text-center">Our STORE LOcation</h1>
-                <div className="grid grid-cols-2 justify-center items-center shadow-2xl bg-white ">
+                <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center shadow-2xl bg-white ">
                     <img src={map} alt="" />
                     <div className="p-5">
-                        <h1 className="text-6xl font-bold uppercase">Our outlat wait for your visiting</h1>
+                        <h1 className="lg:text-6xl md:text-5xl text-3xl font-bold uppercase">Our outlat wait for your visiting</h1>
                         <p className="text-2xl mt-5 text-gray-400 font-thin">Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
                     </div>
                 </div>

@@ -54,7 +54,7 @@ const Navbar = ({ cart }) => {
                 <Link to='/about' className="py-0">About</Link>
               </li>
               <li >
-                <Link to='/' className="py-0">Contact</Link>
+                <Link to='/contact' className="py-0">Contact</Link>
               </li>
               <li >
                 <Link to='/cart' className="py-0"> <IoMdCart className="" />{cartCount}</Link>
@@ -76,7 +76,7 @@ const Navbar = ({ cart }) => {
               <Link to='/about' className="py-0">About</Link>
             </li>
             <li >
-              <Link to='/' className="py-0">Contact</Link>
+              <Link to='/contact' className="py-0">Contact</Link>
             </li>
             <li className="lg:ml-32 relative hover:text-red-300">
               <Link className="py-0" to="/cart">
